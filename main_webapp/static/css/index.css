@@ -1,0 +1,16 @@
+.header-text {
+    position: absolute;
+    top: 30%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-round {border-radius: 8px;}
+
+.font-size {
+    font-size: 60px;
+    font-weight: bold;
+}
