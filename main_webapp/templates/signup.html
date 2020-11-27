@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href='{% static "/css/signup.css" %}'>
+
+</head>
+<body>
+<div class="text-center">
+    <form class="form-signin" action="signup" method="post">
+        {% csrf_token %}
+      <img class="mb-4" src="" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please Sign Up</h1>
+      <label for="inputEmail" class="sr-only">Username</label>
+      <input type="text" name="username" id="inputEmail" class="form-control mb-3" placeholder="Username" required="" autofocus="">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" name="email" id="inputEmail" class="form-control mb-3" placeholder="Email address" required="">
+      <label for="inputEmail" class="sr-only">First name</label>
+      <input type="text" name="first_name" id="inputEmail" class="form-control mb-3" placeholder="First name" required="">
+      <label for="inputEmail" class="sr-only">Last name</label>
+      <input type="text" name="last_name" id="inputEmail" class="form-control mb-3" placeholder="Last name" required="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" name="password1" id="inputPassword" class="form-control mb-3" placeholder="Password" required="">
+      <label for="inputPassword" class="sr-only">Confirm Password</label>
+      <input type="password" name="password2" id="inputPassword" class="form-control mb-3" placeholder="Confirm Password" required="">
+      <button class="btn btn-lg btn-secondary btn-block mt-5 mb-3" type="submit">Sign up</button>
+       <a class="btn btn-lg btn-secondary btn-block" href="/">Cancel</a>
+        <p class="mt-5 mb-3 text-muted">© Music App 2020</p>
+    </form>
+
+    <div>
+        {% for message in messages %}
+            <p class="text-danger">{{message}}</p>
+
+        {%endfor%}
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

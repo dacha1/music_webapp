@@ -14,3 +14,7 @@
     font-size: 60px;
     font-weight: bold;
 }
+
+.card-img-top {
+    height: 200px;
+}
