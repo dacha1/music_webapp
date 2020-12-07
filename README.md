@@ -7,6 +7,6 @@ In order to run this project in another laptop, following steps should be follow
 
 **Note: I have use psycopg2==2.8.6 as postgres library for my window. For mac we have to use psycopg2-binary instead of psycopg2-binary. Use this command on terminal to install.** **pip install psycopg2-binary**
 - Step 3 - Install pip install -r requirements.txt which installs all the dependencies required for the project.
-- Step 4 - Download PG admin if not installed already.
+- Step 4 - Download PG admin if not installed already. Create a musicapp database there and  go to music_webapp/setting.py of my file and change the user name and password as you created for your database.
 - Step 5 - Run python manage.py makemigrations to create a migration, then run python manage.py migrate to create database tables.
 - Step 6 - At last run the python manage.py runserver. It provides the link like 127.0.0.1:8000. Go to this link then the home page is available then sign up and login the webapp and can add the all the informations that i had provided in the top like add artists and albums.
